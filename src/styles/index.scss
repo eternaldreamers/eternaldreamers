@@ -1,0 +1,43 @@
+.hero {
+    position: relative;
+    margin: 0px;
+    height: 100vh;
+    background: linear-gradient(180deg, #121322 0%, #293B36 100%);
+
+    &__image--dove {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        img {
+            width: 850px;
+        }
+    }
+
+    &__container--machine {
+        position: relative;
+        left: 100px;
+        top: 100px;
+        background-color: aqua;
+        width: 580px;
+        height: 580px;
+
+        &--circle {
+            position: absolute;
+            background: linear-gradient(180deg, #1AC141 0%, rgba(255, 245, 0, 0) 100%);
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            bottom: 0px;
+            left: 30px;
+        }
+
+        &--image {
+            position: absolute;
+            top: 50px;
+            img {
+                width: 500px;
+            }
+        }
+    }
+}
+
