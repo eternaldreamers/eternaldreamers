@@ -1,12 +1,12 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json tsconfig.json astro.config.mjs ./
+COPY package.json yarn.lock tsconfig.json astro.config.mjs ./
 COPY ./public ./public
 COPY ./src ./src
 
-RUN rm -rf node_modules && npm install
+RUN rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
 
 EXPOSE 3000
 
