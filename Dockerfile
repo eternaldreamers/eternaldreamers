@@ -2,7 +2,7 @@ FROM node:14-alpine
 
 WORKDIR /app
 
-COPY package.json package-lock.json tsconfig.json ./
+COPY package.json package-lock.json tsconfig.json astro.config.mjs ./
 COPY ./public ./public
 COPY ./src ./src
 
@@ -10,4 +10,4 @@ RUN rm -rf node_modules && npm install
 
 EXPOSE 3000
 
-CMD npm start -- --host 0.0.0.0 &
+CMD npm start -- --host 0.0.0.0
