@@ -15,5 +15,11 @@
     "@astrojs/mdx": "^0.13.0",
     "@astrojs/rss": "^1.2.1",
     "@astrojs/sitemap": "^1.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.57.0",
+    "stylelint": "^14.16.0",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
