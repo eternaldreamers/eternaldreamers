@@ -1,0 +1,17 @@
+version: "3.2"
+services:
+  eternaldreamers:
+    image: eternaldreamers/eternaldreamers
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      eternaldreamers-network:
+        ipv4_address: 192.168.2.2
+
+networks:
+  eternaldreamers-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.2.0/28
