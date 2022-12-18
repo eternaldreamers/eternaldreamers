@@ -1,9 +1,7 @@
 version: "3.2"
 services:
   eternaldreamers:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: eternaldreamers/eternaldreamers
     restart: always
     ports:
       - "3000:3000"
