@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200&display=swap");
+
+.list {
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    & + & {
+      margin-top: 50px;
+    }
+  }
+
+  &__heading {
+    & > * {
+      font-family: "Secular One", sans-serif;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    time {
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    span {
+        color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+
+  &__description {
+    font-family: "Martel", serif;
+  }
+
+  &__footer {
+    padding-top: 10px;
+    margin-top: 20px;
+
+    border-top: 1px solid #d9d9d9;
+  }
+
+  &__cta {
+    & > * {
+      font-family: "Secular One", sans-serif;
+      text-decoration: none;
+
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+}
