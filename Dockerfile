@@ -1,13 +1,13 @@
-FROM node:16-alpine
-
+# build stage
+FROM node:lts-alpine as build-stage
 WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
 
-COPY package.json yarn.lock tsconfig.json ./
-COPY ./public ./public
-COPY ./src ./src
-
-RUN rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
-
-EXPOSE 3000
-
-CMD yarn dev --host
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
