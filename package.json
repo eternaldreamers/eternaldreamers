@@ -43,6 +43,8 @@
 		]
 	},
 	"dependencies": {
-		"bits-ui": "^2.14.4"
+		"bits-ui": "^2.14.4",
+		"konva": "^10.0.12",
+		"svelte-konva": "^1.0.1"
 	}
 }
